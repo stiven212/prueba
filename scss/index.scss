@@ -1,0 +1,37 @@
+@import "./colors.scss";
+
+// Layouts
+@import "../layouts/BasicLayout/BasicLayout.scss";
+@import "../pages/account.scss";
+
+// Pages
+
+@import "../pages/categories/id.scss";
+@import "../pages/search.scss";
+@import "../pages/cart.scss";
+@import "../pages/orders.scss";
+
+// Components
+
+@import "../components/Header/Header.scss";
+@import "../components/Header/TopBar/TopBar.scss";
+@import "../components/Header/Menu/Menu.scss";
+@import "../components/Modal/BasicModal/BasicModal.scss";
+@import "../components/Auth/LoginForm/LoginForm.scss";
+@import "../components/Footer/Footer.scss";
+@import "../components/Footer/Bottom/Bottom.scss";
+@import "../components/Footer/Top/Top.scss";
+@import "../components/Account/ChangeInfoForm/ChangeInfoForm.scss";
+@import "../components/Account/AddressForm/AddressForm.scss";
+@import "../components/Account/ListAddress/ListAdress.scss";
+@import "../components/ListProducts/ListProducts.scss";
+@import "../components/Pagination/Pagination.scss";
+@import "../components/Product/HeaderProduct/HeaderProduct.scss";
+@import "../components/Product/TabsProduct/TabsProduct.scss";
+@import "../components/Product/InfoProduct/InfoProduct.scss";
+@import "../components/Product/CarouselImages/CarouselImages.scss";
+@import "../pages/wishlist.scss";
+@import "../components/Cart/SummaryCart/SummaryCart.scss";
+@import "../components/Cart/AddressShipping/AddressShipping.scss";
+@import "../components/Cart/Payment/Payment.scss";
+@import "../components/Orders/Order/order.scss";
