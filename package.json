@@ -10,7 +10,25 @@
   "dependencies": {
     "next": "12.0.8",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "@ant-design/icons": "^4.7.0",
+    "@paypal/react-paypal-js": "^7.5.1",
+    "antd": "^4.17.3",
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "jquery": "^3.6.0",
+    "js-cookie": "^3.0.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "next-auth": "^4.0.6",
+    "next-auth-client": "^1.5.0",
+    "node-sass": "^6.0.1",
+    "prop-types": "^15.8.0",
+    "query-string": "^7.1.0",
+    "react-slick": "^0.28.1",
+    "react-toastify": "^8.1.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "8.7.0",
