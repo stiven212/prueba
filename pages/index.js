@@ -41,7 +41,7 @@ function Carrousel() {
   return (
     <>
       {/* <Divider orientation="left">Galeria</Divider> */}
-      <Row gutter={10} style={{ justifyContent: "center" }}>
+      <Row gutter={10} style={{ justifyContent: "center",  marginTop: "3em" }}>
         <Col className="gutter-row" span={22}>
           <Carousel autoplay>
             <div>
