@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
           <h2>Hola que tal
-            
+
           </h2>
       </main>
 
@@ -25,7 +25,7 @@ export default function Home() {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image src="/insignia.png" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>

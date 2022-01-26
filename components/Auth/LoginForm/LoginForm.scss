@@ -1,0 +1,11 @@
+.login-form {
+  .ant-form-item {
+    .actions {
+      justify-content: space-between !important;
+
+      .ant-btn-ghost {
+        margin: 0;
+      }
+    }
+  }
+}
