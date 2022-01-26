@@ -40,7 +40,7 @@ function Carrousel() {
   };
   return (
     <>
-      <Divider orientation="left">Carrousel</Divider>
+      {/* <Divider orientation="left">Galeria</Divider> */}
       <Row gutter={10} style={{ justifyContent: "center" }}>
         <Col className="gutter-row" span={22}>
           <Carousel autoplay>
@@ -93,7 +93,7 @@ function Genres() {
 
   return (
     <>
-      <Divider orientation="left">Products</Divider>
+      <Divider orientation="left">Productos</Divider>
 
       <Row gutter={[2, 16]} style={{ justifyContent: "center" }}>
         <Col
@@ -226,7 +226,7 @@ function Categories() {
 
   return (
     <>
-      <Divider orientation="left">Mas ofertas</Divider>
+      <Divider orientation="left">Más ofertas</Divider>
 
       <Row
         gutter={[2, 32]}

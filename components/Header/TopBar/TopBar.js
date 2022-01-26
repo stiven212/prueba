@@ -53,7 +53,7 @@ function Searchc() {
   };
   return (
     <Search
-      placeholder="input search text"
+      placeholder="Buscar producto"
       value={router.query.query}
       allowClear
       style={{ width: 220 }}
