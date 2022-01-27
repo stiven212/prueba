@@ -250,7 +250,7 @@ function Policies() {
           </p>
           <p>
          
-          <a href="https://www.google.com/maps/place/2%C2%B013'06.6%22S+79%C2%B054'46.9%22W/@-2.218488,-79.9135712,19z/data=!3m1!4b1!4m9!1m2!2m1!1sCalle+A+1818+y+2Do+Callej%C3%B3n+11!3m5!1s0x0:0x2c6907496115d44e!7e2!8m2!3d-2.2184882!4d-79.9130241?hl=es" target="_blank"> Calle A 1818 y 2Do Callejón 11</a>
+          <a href="https://www.google.com/maps/place/2%C2%B013'06.6%22S+79%C2%B054'46.9%22W/@-2.218488,-79.9135712,19z/data=!3m1!4b1!4m9!1m2!2m1!1sCalle+A+1818+y+2Do+Callej%C3%B3n+11!3m5!1s0x0:0x2c6907496115d44e!7e2!8m2!3d-2.2184882!4d-79.9130241?hl=es" target="_blank" rel="noreferrer"> Calle A 1818 y 2Do Callejón 11</a>
           </p>
         </Modal>
         <Col
