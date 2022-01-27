@@ -416,11 +416,10 @@ function MenuMobile(props) {
       ></Menu.Item>
 
       <Drawer
-        title="Menu Movil"
+        title="Menu Usuario"
         placement="right"
         onClose={onClose}
-        visible={visible}
-        headerStyle={{ backgroundColor: "#09D309" }}
+        visible={visible}   
         drawerStyle={{ backgroundColor: "gray", color: "white" }}
         footer={
           <>
