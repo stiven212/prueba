@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 export default function SummaryCart(props) {
   const { products, reloadCart, setReloadCart } = props;
   const [totalPrice, setTotalPrice] = useState(0);
-  const router = useRouter();
-  const [payment, setpayment] = useState(null);
+  // const router = useRouter();
+  // const [payment, setpayment] = useState(null);
   const { useBreakpoint } = Grid;
   const screens = useBreakpoint();
 
