@@ -9,8 +9,10 @@ export default function PayPhone(data, value) {
     Tax: cost * 0.12,
     clientTransactionId: data,
     //  clientTransactionId: "Pruebasx0077",
-    responseUrl: "http://localhost:3000/cart",
-    cancellationUrl: "http://localhost:3000/cart",
+    responseUrl: "https://prueba-rho.vercel.app/cart",
+    cancellationUrl: "https://prueba-rho.vercel.app/cart",
+    // responseUrl: "http://localhost:3000/cart",  // it works in the localhost
+    // cancellationUrl: "http://localhost:3000/cart", // it works in the localhost
   };
 
   $.ajax({
