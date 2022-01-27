@@ -90,14 +90,14 @@ export default function SummaryCart(props) {
         ),
         categoria: <>{product.category_name[0].name}</>,
         entrega: "inmediata",
-        precio: <>${product.price.toFixed(2)}</>,
+        precio: <>${product.price}</>,
       })
     );
   }
 
   data.push({
     producto: <h2>Total a pagar</h2>,
-    precio: <div className="total-price">${totalPrice.toFixed(2)}</div>,
+    precio: <div className="total-price">${totalPrice}</div>,
   });
   return (
     <div className="summary-cart">

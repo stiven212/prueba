@@ -131,7 +131,7 @@ function AddressModal(props) {
           <h3>Detalle de pedido</h3>
           <p>Subtotal = ${subtotal}</p>
           <p>IVA = ${iva}</p>
-          <p>Precio final: ${total.toFixed(2)}</p>
+          <p>Precio final: ${total}</p>
           <p>Cantidad: {quantity}</p>
         </Col>
         <Col offset={3}>
