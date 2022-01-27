@@ -38,13 +38,13 @@ function Network() {
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/disenoxtremo7/" target="_blank"  rel="noreferrer">
+        <a href="https://www.instagram.com/insignia_estampados" target="_blank"  rel="noreferrer">
           <InstagramOutlined style={{ fontSize: "26px", color: "#fff" }} />
         </a>
       </li>
       <li>
         <a
-          href="https://api.whatsapp.com/send?phone=593993818915&app=facebook&entry_point=page_cta"
+          href="https://api.whatsapp.com/send?phone=593960032952&app=facebook&entry_point=page_cta"
           target="_blank" 
           rel="noreferrer"
         >
@@ -59,6 +59,7 @@ function Policies() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isModalVisible1, setIsModalVisible1] = useState(false);
   const [isModalVisible2, setIsModalVisible2] = useState(false);
+  const [isModalVisible3, setIsModalVisible3] = useState(false);
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -68,6 +69,9 @@ function Policies() {
   };
   const showModal2 = () => {
     setIsModalVisible2(true);
+  };
+  const showModal3 = () => {
+    setIsModalVisible3(true);
   };
 
   const handleOk = () => {
@@ -90,6 +94,13 @@ function Policies() {
 
   const handleCancel2 = () => {
     setIsModalVisible2(false);
+  };
+  const handleOk3 = () => {
+    setIsModalVisible3(false);
+  };
+
+  const handleCancel3 = () => {
+    setIsModalVisible3(false);
   };
 
   return (
@@ -213,9 +224,35 @@ function Policies() {
           md={{ span: 12 }}
           sm={{ span: 10, offset: 2 }}
           xs={{ span: 11, offset: 4 }}
+          onClick={showModal3}
+
         >
           <h3>Contactanos</h3>
         </Col>
+        <Modal
+          title="Contactanos"
+          visible={isModalVisible3}
+          onOk={handleOk3}
+          onCancel={handleCancel3}
+          footer=""
+        >
+          <p>
+            <strong>Numeros disponibles</strong>
+          </p>
+          <p>
+              <ul>
+                <li>+593 96 003 2952</li>
+                <li>+593 99 381 8915</li>
+              </ul>
+          </p>
+          <p>
+            <strong>Dirección</strong>
+          </p>
+          <p>
+         
+          <a href="https://www.google.com/maps/place/2%C2%B013'06.6%22S+79%C2%B054'46.9%22W/@-2.218488,-79.9135712,19z/data=!3m1!4b1!4m9!1m2!2m1!1sCalle+A+1818+y+2Do+Callej%C3%B3n+11!3m5!1s0x0:0x2c6907496115d44e!7e2!8m2!3d-2.2184882!4d-79.9130241?hl=es" target="_blank"> Calle A 1818 y 2Do Callejón 11</a>
+          </p>
+        </Modal>
         <Col
           lg={{ span: 10 }}
           md={{ span: 10, offset: 0 }}
