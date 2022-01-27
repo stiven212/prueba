@@ -7,6 +7,8 @@ import BasicModal from "../../Modal/BasicModal";
 import Detail from "../../../api/order";
 import { EyeOutlined } from "@ant-design/icons";
 import { map } from "lodash";
+import useAuth from "../../../hooks/useAuth";
+
 
 export default function Order(props) {
   const { order } = props;
@@ -16,6 +18,9 @@ export default function Order(props) {
 
   const [showModal, setShowModal] = useState(false);
 
+  const { auth, logout } = useAuth();
+
+
 
 
   useEffect(async () => {
@@ -23,8 +28,10 @@ export default function Order(props) {
     const getData = async () => {
 
       try {
-        const response = await Detail.getOrder(id);
-        setDetail(response.data);
+        // const response = await Detail.getOrder(id);
+        const response = await Detail.getOneOrder(logout, id);
+        console.log(response)
+        setDetail(response);
       } catch (e) {
         console.log(e);
       }

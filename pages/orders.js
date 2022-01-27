@@ -5,19 +5,26 @@ import BasicLayout from "../layouts/BasicLayout";
 import Detail from "../api/order";
 import Order from "../components/Orders/Order";
 import Seo from "../components/Seo";
+import useAuth from "../hooks/useAuth";
 
 const Orders = () =>  {
   const [orders, setOrders] = useState(null);
+  const { auth, logout } = useAuth();
+
+
 
   useEffect(() => {
 
     const getData = async () => {
 
       try {
-        const response = await Detail.getOrders();
-        console.log(response.data.data);
-        setOrders(response.data.data);
+        // const response = await Detail.getOrders();
+        // console.log(response.data.data);
+        const response = await Detail.getAllOrders(logout);
+        console.log(response.data);
+        setOrders(response.data);
       } catch (error) {
+        console.log(error)
         console.log(error.response);
       }
     };

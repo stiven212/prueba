@@ -2,21 +2,29 @@ import React, { useState, useEffect } from "react";
 import Order from "../../../api/address";
 import { map, size } from "lodash";
 import { Row, Col, Button, message } from "antd";
+import useAuth from "../../../hooks/useAuth";
 
 export default function ListAddress(props) {
   const { reloadAddresses, setReloadAddresses, openModal } = props;
 
   const [addresses, setAddresses] = useState(null);
 
+  const { auth, logout } = useAuth();
+
+
+
   useEffect( () => {
 
     const getData = async () => {
 
       try {
-        const response = await Order.addresses();
-        const address = response.data.data;
+        // const response = await Order.addresses();
+        // const address = response.data.data;
+        const response = await Order.getAddresses(logout);
+        console.log(response.data)
         
-        setAddresses(address);
+        // setAddresses(address);
+        setAddresses(response.data);
         setReloadAddresses(false);
       } catch (error) {
         console.log(error.response);
