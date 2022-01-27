@@ -4,6 +4,8 @@ import { map, size } from "lodash";
 import Link from "next/link";
 import classNames from "classnames";
 import Order from "../../../api/address";
+import useAuth from "../../../hooks/useAuth";
+
 
 export default function AddressShipping(props) {
   const { setAddress } = props;
@@ -11,15 +13,24 @@ export default function AddressShipping(props) {
   const [addresses, setAddresses] = useState(null);
 
   const [addressActive, setAddressActive] = useState(null);
+
+  const { auth, logout } = useAuth();
+
   useEffect( () => {
 
     const getData = async () => {
 
       try {
-        const response = await Order.addresses();
-        setAddresses(response.data.data || []);
+        // const response = await Order.addresses();
+        const response = await Order.getAddresses(logout);
+        console.log(response.data)
+        setAddresses(response.data || []);
       } catch (error) {
-        console.log(error.response);
+
+        console.log(error);
+        if(error.response){
+          console.log(error.response);
+        }
       }
     };
     getData();
