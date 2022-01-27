@@ -15,12 +15,13 @@ export default function SummaryCart(props) {
 
   const { removeProductCart } = useCart();
 
+  console.log(parseInt(totalPrice))
   useEffect(() => {
     let price = 0;
     forEach(products, (product) => {
       price += product.price;
     });
-    setTotalPrice(price);
+    setTotalPrice(parseInt(price) );
   }, [reloadCart, products]);
 
   const removeProduct = (product) => {

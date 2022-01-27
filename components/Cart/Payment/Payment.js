@@ -61,7 +61,7 @@ export default function Payment(props) {
             });
           }
           
-          if (router.query.id && totalPrice !== 0) {
+          if (router.query.id && totalPrice > 0) {
             if (router.query.id === "0") {
               console.log("Transaccion cancelada");
               
@@ -113,7 +113,7 @@ export default function Payment(props) {
     forEach(products, (product) => {
       price += product.price;
     });
-    setTotalPrice(price);
+    setTotalPrice(parseInt(price) );
   }, [products]);
 
   return (
