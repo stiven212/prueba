@@ -1,22 +1,26 @@
 import React, { useState } from "react";
-import { Form, Button, Input } from "antd";
+import { Form, Button, Input, message } from "antd";
 import User from "../../../api/user";
 
 export default function ForgotForm(props) {
   const { showLoginForm } = props;
-  const [result, setResult] = useState(" ");
+  // const [result, setResult] = useState(" ");
 
   const onFinish = async (formData) => {
     try {
-      setResult("");
+      // setResult("");
       const userData = {
         ...formData,
       };
 
-      setResult("Verifica tu correo");
+      // setResult("Verifica tu correo");
       const response = await User.forgot(userData);
+      // console.log(response)
+      message.info("Se acaba de enviar un mensaje a tu correo electronico!!", 8)
+      
     } catch (e) {
       console.log("error", e);
+      // message.info("error", 8)
 
       // setResult("Ocurrio un error");
     }
@@ -51,7 +55,6 @@ export default function ForgotForm(props) {
         </div>
       </Form.Item>
 
-      <h1>{result}</h1>
     </Form>
   );
 }
