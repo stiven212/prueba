@@ -3,7 +3,7 @@ import { Button } from "antd";
 import Head from "next/head";
 import PayPhone from "../../../api/transaction";
 import { ShoppingCartOutlined } from "@ant-design/icons";
-import { forEach } from "lodash";
+import { forEach, parseInt } from "lodash";
 import { useRouter } from "next/router";
 import Detail from "../../../api/order";
 import { size } from "lodash";
@@ -29,6 +29,8 @@ export default function Payment(props) {
   useEffect( () => {
 
     const getData = async () => {
+
+      console.log(totalPrice)
 
       
       try {
@@ -111,10 +113,11 @@ export default function Payment(props) {
   useEffect(() => {
     let price = 0;
     forEach(products, (product) => {
-      price += product.price;
+      price += parseInt(product.price) ;
     });
     setTotalPrice(parseInt(price) );
-  }, [products]);
+    console.log(totalPrice);
+  }, [products,address]);
 
   return (
     <>
