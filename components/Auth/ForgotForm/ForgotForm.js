@@ -19,17 +19,17 @@ export default function ForgotForm(props) {
 
       message.info("Se acaba de enviar un mensaje a tu correo electronico!!", 8)
       // setResult("Verifica tu correo");
-      setLoading(false);
-
+      
       const response = await User.forgot(userData);
       // console.log(response)
       
     } catch (e) {
       // console.log("error", e);
       // message.info("error", 8)
-
+      
       // setResult("Ocurrio un error");
     }
+    setLoading(false);
   };
   return (
     <Form labelCol={{ span: 8 }} className="login-form" onFinish={onFinish}>
@@ -50,11 +50,11 @@ export default function ForgotForm(props) {
 
       <Form.Item>
         <div className="actions">
-          <Button type="ghost" onClick={showLoginForm} loading={loading}>
+          <Button type="ghost" onClick={showLoginForm}  >
             Ingresar
           </Button>
           <div>
-            <Button htmlType="submit" className="submit">
+            <Button htmlType="submit" className="submit" loading={loading}>
               Restablecer Contraseña
             </Button>
           </div>
