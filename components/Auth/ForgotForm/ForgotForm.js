@@ -13,13 +13,13 @@ export default function ForgotForm(props) {
         ...formData,
       };
 
+      message.info("Se acaba de enviar un mensaje a tu correo electronico!!", 8)
       // setResult("Verifica tu correo");
       const response = await User.forgot(userData);
       // console.log(response)
-      message.info("Se acaba de enviar un mensaje a tu correo electronico!!", 8)
       
     } catch (e) {
-      console.log("error", e);
+      // console.log("error", e);
       // message.info("error", 8)
 
       // setResult("Ocurrio un error");
