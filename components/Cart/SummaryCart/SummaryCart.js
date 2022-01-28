@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Table, Image, Grid } from "antd";
-import { forEach, map, size } from "lodash";
+import { forEach, map, parseInt, size } from "lodash";
 import useCart from "../../../hooks/useCart";
 import { DeleteOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
@@ -19,7 +19,7 @@ export default function SummaryCart(props) {
   useEffect(() => {
     let price = 0;
     forEach(products, (product) => {
-      price += product.price;
+      price += parseInt( product.price);
     });
     setTotalPrice(parseInt(price) );
   }, [reloadCart, products]);
