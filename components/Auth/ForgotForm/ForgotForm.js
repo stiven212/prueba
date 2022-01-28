@@ -5,8 +5,12 @@ import User from "../../../api/user";
 export default function ForgotForm(props) {
   const { showLoginForm } = props;
   // const [result, setResult] = useState(" ");
+  const [loading, setLoading] = useState(false);
+
 
   const onFinish = async (formData) => {
+    setLoading(true);
+
     try {
       // setResult("");
       const userData = {
@@ -15,6 +19,8 @@ export default function ForgotForm(props) {
 
       message.info("Se acaba de enviar un mensaje a tu correo electronico!!", 8)
       // setResult("Verifica tu correo");
+      setLoading(false);
+
       const response = await User.forgot(userData);
       // console.log(response)
       
@@ -44,7 +50,7 @@ export default function ForgotForm(props) {
 
       <Form.Item>
         <div className="actions">
-          <Button type="ghost" onClick={showLoginForm}>
+          <Button type="ghost" onClick={showLoginForm} loading={loading}>
             Ingresar
           </Button>
           <div>
