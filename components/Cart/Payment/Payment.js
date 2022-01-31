@@ -133,7 +133,7 @@ export default function Payment(props) {
               icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
               onClick={() => PayPhone(dataName, totalPrice)}
             >
-              Pago con tarjeta credito/Debito
+              Pago con tarjeta Crédito/Débito
             </Button>
 
           

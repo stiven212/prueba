@@ -18,24 +18,26 @@ export default function LoginForm(props) {
     setLoading(true);
     setUserInfo(null);
     setResult("Ingresando");
-
+    
     try {
       const userData = {
         ...formData,
       };
-
+      
       const response = await User.login(userData);
       login(response.data.token);
-
+      
       setUserInfo(response.data);
-      if (response.data.role !== "ROLE_USER") {
-        router.push("/admin/products");
-      }
+      // if (response.data.role !== "ROLE_USER") {
+      //   router.push("/admin/products");
+      // }
+      setLoading(false);
       onCloseModal();
     } catch (e) {
       console.log("error");
       setResult("Credenciales incorrectas");
       message.error("Credenciales invalidas")
+      setLoading(false);
     }
   };
 
