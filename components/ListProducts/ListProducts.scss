@@ -22,7 +22,19 @@
 
     &-image {
       position: relative;
+      width: 100%;
+      height: 250px;
+      .ant-image{
 
+        height: 100%;
+        width: 100%;
+        .ant-image-img{
+          height: 100%;
+          width: 100%;
+          object-fit:cover;
+
+        }
+      }
       &-info {
         position: absolute;
         width: 100%;

@@ -110,7 +110,7 @@ function Genres() {
             src="https://media.gq.com.mx/photos/616d8b8b7cf20cb28245520c/1:1/w_1999,h_1999,c_limit/ropa-casual-de-hombre-con-saco-como-combinar-con-que-usar.jpg"
             placeholder="blur"
           />
-          <Link href="/categories/9">
+          <Link href="/categories/6">
             <a>
               <div className="overlay">
                 <div>Hombres</div>
@@ -132,7 +132,7 @@ function Genres() {
             src="https://www.myoutfie.com/historias/wp-content/uploads/2019/10/ropa-mujer-casual-5.jpg"
             placeholder="blur"
           />
-          <Link href="/categories/8">
+          <Link href="/categories/7">
             <a>
               <div className="overlay">
                 <div >Mujeres</div>
@@ -154,7 +154,7 @@ function Genres() {
             src="https://i.pinimg.com/550x/d6/58/70/d65870a3279c9168b3a3406634d1b370.jpg"
             placeholder="blur"
           />
-          <Link href="/categories/7">
+          <Link href="/categories/8">
             <a>
               <div className="overlay">
                 <div>Niños</div>
@@ -176,7 +176,7 @@ function Genres() {
             src="https://i.pinimg.com/originals/a0/26/17/a026174b67fb5027c443da5c22bdf850.jpg"
             placeholder="blur"
           />
-          <Link href="/categories/7">
+          <Link href="/categories/9">
             <a>
               <div className="overlay">
                 <div >Niñas</div>
@@ -206,7 +206,7 @@ function Ofertas() {
         <Col className="gutter-row" span={22}>
           <Carousel autoplay>
             <div>
-              <Link href="/categories/6">
+              <Link href="/categories/10">
                 <a>
                   <h3 style={contentStyle} id="second"></h3>
                 </a>
@@ -289,7 +289,7 @@ function Categories() {
             alt="tazas"
           />
 
-          <Link href="/categories/3">
+          <Link href="/categories/5">
             <a>
               <div className="overlay">
                 <div >Tazas</div>
@@ -311,7 +311,7 @@ function Categories() {
             alt="mascarillas"
           />
 
-          <Link href="/categories/4">
+          <Link href="/categories/3">
             <a>
               <div className="overlay">
                 <div >Macarillas</div>

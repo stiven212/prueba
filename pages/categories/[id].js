@@ -6,6 +6,7 @@ import { size, map } from "lodash";
 import { Spin, Alert } from "antd";
 import ListProducts from "../../components/ListProducts";
 import Pagination from "../../components/Pagination";
+import Category from "../../api/category";
 import Seo from "../../components/Seo";
 
 const Categorie = () => {
@@ -14,6 +15,7 @@ const Categorie = () => {
   const [products, setProducts] = useState(null);
   const [totalProducts, setTotalProducts] = useState(null);
   const [page, setPage] = useState(1);
+  const [catName, setCatName] = useState("Categoria");
   const start = 5;
 
   const getStartItem = () => {
@@ -31,6 +33,9 @@ const Categorie = () => {
         setTotalProducts(response.data.data.length);
         setPage(query.id);
         console.log("it work")
+        const cate = await Category.categorie(query.id);
+        setCatName(cate.data.name);
+        
       } catch (e) {
         console.log(e);
       }
@@ -40,7 +45,7 @@ const Categorie = () => {
 
   return (
     <BasicLayout className="categorie">
-      <Seo title={`Categoria ${query.id}`} />
+      <Seo title={`${catName}`} />
       {!products && <Spin tip="Cargando productos"></Spin>}
       {products && size(products) === 0 && (
         <div>
